@@ -1,4 +1,4 @@
-@googleSearch @smoke @ui
+@googleSearch @ui
 Feature: Google_Search
 
   Background:
@@ -15,7 +15,6 @@ Feature: Google_Search
     And user search for teapot
     Then verify that result contains teapot
     And user closes the application
-
 
 
 

@@ -62,9 +62,10 @@ public class Driver {
     }
     //    4. close driver
     public static void closeDriver(){
-        if (driver!=null){
+        if (driver != null && driver.get() != null) {  // check if actual WebDriver instance exists
             driver.get().quit();
             driver.remove();
         }
     }
+
 }

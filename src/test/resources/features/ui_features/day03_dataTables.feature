@@ -1,6 +1,7 @@
-@dataTables
+@dataTables @smoke
 Feature: data_tables_feature
 
+@failed
   Scenario: Create and verify a new entry in DataTables
     Given user navigates to "https://editor.datatables.net/"
     And User clicks on New button

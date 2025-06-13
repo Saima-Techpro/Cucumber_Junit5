@@ -23,6 +23,7 @@ public class DataTablesStepDefs {
     @Given("User enters user details:")
     public void user_enters_user_details(DataTable dataTable) {
         userList = dataTable.asMap();
+
         String firstNameValue = userList.get("first_name");
         System.out.println("firstName = " + firstNameValue); // Angelina
         dataTablesPage.firstNameInput.sendKeys(firstNameValue);
@@ -68,7 +69,9 @@ public class DataTablesStepDefs {
     }
     @Then("Verify that name field contains the first name {string}")
     public void verify_that_name_field_contains_the_first_name(String firstName) {
-        assertTrue(dataTablesPage.nameField.getText().contains(firstName));
+        String actualText = dataTablesPage.nameField.getText();
+        System.out.println("Verifying name field text: " + actualText);
+        assertTrue(actualText.contains(firstName));
     }
 
 
