@@ -4,7 +4,6 @@ import io.cucumber.java.en.*;
 import org.openqa.selenium.Keys;
 import pages.GoogleHomePage;
 import utilities.Driver;
-import utilities.WaitUtils;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static utilities.WaitUtils.waitFor;

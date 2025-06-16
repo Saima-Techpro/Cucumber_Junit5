@@ -2,7 +2,6 @@
 Feature: parameterising
 
   @tc01
-@failed
   Scenario: TC01_iphone_search
     Given user navigates to "https://www.google.com/"
     And user search for "iPhone" on google

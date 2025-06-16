@@ -14,6 +14,8 @@ import static io.cucumber.junit.platform.engine.Constants.*;
                 "junit:target/xml-reports/cucumber.xml , " +
                 "rerun:target/failedRerun.txt")
 
+// To publish reports
+@ConfigurationParameter(key = "cucumber.publish.enabled" , value = "true")
 
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "stepdefinitions , hooks")
 

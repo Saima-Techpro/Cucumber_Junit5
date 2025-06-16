@@ -9,10 +9,15 @@ import static io.cucumber.junit.platform.engine.Constants.*;
 @SelectClasspathResource("features/ui_features")
 
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME,
-        value = "pretty , html:target/cucumber-reports.html , " +
+        value = "pretty , " +
+                "html:target/cucumber-reports.html , " +
                 "json:target/json-reports/cucumber.json , " +
                 "junit:target/xml-reports/cucumber.xml , " +
                 "rerun:target/failedRerun.txt") // This writes failed scenarios
+
+// To publish reports
+@ConfigurationParameter(key = "cucumber.publish.enabled" , value = "true")
+
 
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "stepdefinitions, hooks")
 @ConfigurationParameter(key = ANSI_COLORS_DISABLED_PROPERTY_NAME, value = "true")

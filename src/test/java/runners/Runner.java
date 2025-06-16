@@ -10,11 +10,14 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features/ui_features")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME ,
-        value = "pretty , " +
+        value = "pretty , " +  // creates reports on the console as well
                 "html:target/cucumber-reports.html , " +
                 "json:target/json-reports/cucumber.json , " +
                 "junit:target/xml-reports/cucumber.xml , " +
                 "rerun:target/failedRerun.txt")
+
+// To publish reports
+@ConfigurationParameter(key = "cucumber.publish.enabled" , value = "true")
 
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "stepdefinitions , hooks")
 
@@ -32,6 +35,10 @@ public class Runner {
     - @RunWith() is imported from JUint 4 but that's older version. JUnit5 is latest (JUnit Jupiter)
     - @RunWith() annotation is deprecated. So we use @Suite in its place
 
+For parallel testing, use any of the following commands on the terminal
+mvn clean test
+mvn clean verify
+mvn clean install
  */
 
 

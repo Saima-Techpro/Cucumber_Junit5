@@ -14,6 +14,9 @@ import static io.cucumber.junit.platform.engine.Constants.*;
                 "json:target/json-reports/failed-cucumber.json, " +
                 "junit:target/xml-reports/failed-cucumber.xml")
 
+// To publish reports
+@ConfigurationParameter(key = "cucumber.publish.enabled" , value = "true")
+
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "stepdefinitions, hooks")
 @ConfigurationParameter(key = ANSI_COLORS_DISABLED_PROPERTY_NAME, value = "true")
 @ConfigurationParameter(key = EXECUTION_DRY_RUN_PROPERTY_NAME, value = "false")
