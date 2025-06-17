@@ -14,7 +14,8 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
                 "html:target/cucumber-reports.html , " +
                 "json:target/json-reports/cucumber.json , " +
                 "junit:target/xml-reports/cucumber.xml , " +
-                "rerun:target/failedRerun.txt")
+                "rerun:target/failedRerun.txt, " +
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm")
 
 // To publish reports
 @ConfigurationParameter(key = "cucumber.publish.enabled" , value = "true")
@@ -23,7 +24,7 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 
 @ConfigurationParameter(key = ANSI_COLORS_DISABLED_PROPERTY_NAME, value = "true")
 @ConfigurationParameter(key = EXECUTION_DRY_RUN_PROPERTY_NAME, value = "false")
-@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@param")
+@ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "@car_rental")
 
 public class Runner {
 }

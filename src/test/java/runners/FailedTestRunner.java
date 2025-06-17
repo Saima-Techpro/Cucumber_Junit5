@@ -12,7 +12,8 @@ import static io.cucumber.junit.platform.engine.Constants.*;
         value = "pretty, " +
                 "html:target/failed-cucumber-reports.html, " +
                 "json:target/json-reports/failed-cucumber.json, " +
-                "junit:target/xml-reports/failed-cucumber.xml")
+                "junit:target/xml-reports/failed-cucumber.xml, " +
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm")
 
 // To publish reports
 @ConfigurationParameter(key = "cucumber.publish.enabled" , value = "true")

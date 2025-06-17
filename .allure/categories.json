@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Assertion failed",
+    "matchedStatuses": ["failed"],
+    "messageRegex": ".*AssertionError.*"
+  },
+  {
+    "name": "UI Element Not Found",
+    "matchedStatuses": ["broken"],
+    "messageRegex": ".*NoSuchElementException.*"
+  }
+]

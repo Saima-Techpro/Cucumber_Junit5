@@ -1,0 +1,8 @@
+{
+  "name": "Jenkins",
+  "type": "jenkins",
+  "url": "https://jenkins.example.com/job/myproject/",
+  "buildOrder": 1,
+  "buildName": "#101",
+  "buildUrl": "https://jenkins.example.com/job/myproject/101/"
+}

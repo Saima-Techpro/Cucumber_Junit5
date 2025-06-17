@@ -13,7 +13,8 @@ import static io.cucumber.junit.platform.engine.Constants.*;
                 "html:target/cucumber-reports.html , " +
                 "json:target/json-reports/cucumber.json , " +
                 "junit:target/xml-reports/cucumber.xml , " +
-                "rerun:target/failedRerun.txt") // This writes failed scenarios
+                "rerun:target/failedRerun.txt, " +
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm") // This writes failed scenarios
 
 // To publish reports
 @ConfigurationParameter(key = "cucumber.publish.enabled" , value = "true")
